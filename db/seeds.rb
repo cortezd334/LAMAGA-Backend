@@ -9,4 +9,4 @@
 #  VoterInfo.get_data
 
 
-zana = User.create(name: "Zana", address: "15404 Third Pl W Lynnwood WA 98087",age: 22,party: "Democrat",registered: true, password: "123")
+zana = User.create(name: "Zana", username:"Zana", address: "15404 Third Pl W Lynnwood WA 98087",age: 22,party: "Democrat",registered: true, password: "123")
