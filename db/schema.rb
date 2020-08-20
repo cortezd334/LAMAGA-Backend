@@ -46,8 +46,9 @@ ActiveRecord::Schema.define(version: 2020_08_18_171035) do
   end
 
   create_table "votes", force: :cascade do |t|
-    t.string "ballot"
-    t.string "poll_location"
+    t.string "name"
+    t.string "party"
+    t.string "candidateUrl"
     t.integer "user_id", null: false
     t.integer "candidates_id", null: false
     t.datetime "created_at", precision: 6, null: false
