@@ -10,7 +10,6 @@ class UsersController < ApplicationController
     end
 
     def user_params
-        params.require(:user).permit(:name, :age, :address)
-        # do we need to add anything else in the permits?
+        params.permit(:name, :username, :age, :address, :party, :password)
     end
 end
