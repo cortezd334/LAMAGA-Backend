@@ -50,7 +50,7 @@ ActiveRecord::Schema.define(version: 2020_08_18_171035) do
     t.string "party"
     t.string "candidateUrl"
     t.integer "user_id", null: false
-    t.integer "candidates_id", null: false
+    t.integer "candidates_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["candidates_id"], name: "index_votes_on_candidates_id"

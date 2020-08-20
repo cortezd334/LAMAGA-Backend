@@ -6,7 +6,7 @@ class CreateVotes < ActiveRecord::Migration[6.0]
       t.string :candidateUrl
       
       t.references :user, null: false, foreign_key: true
-      t.references :candidates, null: false, foreign_key: true
+      t.references :candidates, null: true, foreign_key: true
 
       t.timestamps
     end
