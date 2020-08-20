@@ -3,8 +3,7 @@ class CreateCandidates < ActiveRecord::Migration[6.0]
     create_table :candidates do |t|
       t.string :name
       t.string :party
-      t.string :age
-      t.references :user, null: false, foreign_key: true
+      t.integer :age
       t.references :state, null: false, foreign_key: true
 
       t.timestamps
