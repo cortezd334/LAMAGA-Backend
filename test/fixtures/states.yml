@@ -2,6 +2,10 @@
 
 one:
   name: MyString
+  current_rep: MyString
+  current_sen: MyString
 
 two:
   name: MyString
+  current_rep: MyString
+  current_sen: MyString

@@ -3,13 +3,11 @@
 one:
   name: MyString
   party: MyString
-  age: MyString
-  user: one
+  age: 1
   state: one
 
 two:
   name: MyString
   party: MyString
-  age: MyString
-  user: two
+  age: 1
   state: two
