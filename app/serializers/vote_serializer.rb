@@ -1,5 +1,5 @@
 class VoteSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :name, :party, :candidateUrl
   has_one :user
-  has_one :candidates
+  has_one :candidate
 end
