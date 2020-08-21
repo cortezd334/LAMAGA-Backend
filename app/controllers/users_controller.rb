@@ -11,7 +11,6 @@ class UsersController < ApplicationController
     end
 
     def create
-        # byebug    
         user = User.create(user_params)
         render json: user
     end
@@ -19,6 +18,13 @@ class UsersController < ApplicationController
     def edit
         user = User.find(params[:id])
         render json: user 
+    end
+
+    def destroy
+        user = User.find(params[:id])
+        # byebug
+        user.destroy
+        render json: {error: "Your account has been deleted"}
     end
     
     def update
@@ -28,7 +34,6 @@ class UsersController < ApplicationController
     end
 
     def login
-        # byebug
         user = User.find_by(username: params[:username])
         if user && user.authenticate(params[:password])
             render json: user
