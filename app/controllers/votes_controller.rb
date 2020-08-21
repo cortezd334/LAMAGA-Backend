@@ -2,7 +2,7 @@ class VotesController < ApplicationController
 
     def create
         vote = Vote.create(vote_params)
-        # byebug
+        byebug
         render json: vote
     end
 
@@ -13,7 +13,8 @@ class VotesController < ApplicationController
 
     private
     def vote_params
-        params.require(:vote).permit(:name, :party, :candidateUrl)
+        params.require(:vote).permit(:name, :party, :candidateUrl, :user_id)
         # params.permit(:name, :party, :candidateUrl)
     end
+    
 end
