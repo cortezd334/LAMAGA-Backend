@@ -5,6 +5,7 @@ class UsersController < ApplicationController
     end
 
     def create
+# byebug
         user = User.create(user_params)
         render json: user
     end
@@ -15,6 +16,7 @@ class UsersController < ApplicationController
     end
 
     def login
+        # byebug
         user = User.find_by(username: params[:username])
         if user && user.authenticate(params[:password])
             render json: user
@@ -25,7 +27,7 @@ class UsersController < ApplicationController
 
     private
     def user_params
-        params.permit(:name, :age, :address, :username, :password, :party)
+        params.require(:user).permit(:name, :age, :address, :username, :password, :party)
         # do we need to add anything else in the permits?
     end
 end
