@@ -1,8 +1,13 @@
 class VotesController < ApplicationController
 
+    def index
+        vote = Vote.all
+        render json: vote
+    end
+
     def create
         vote = Vote.create(vote_params)
-        byebug
+        # byebug
         render json: vote
     end
 
